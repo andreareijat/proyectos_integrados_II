@@ -38,6 +38,8 @@ def scan_and_move():
 def laser_callback(msg):
     global distancia
     distancia = msg.ranges[int(len(msg.ranges)/2)]
+
+    
     
     try:
         scan_and_move()
