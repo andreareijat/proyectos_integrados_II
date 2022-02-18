@@ -1,0 +1,22 @@
+.word 
+especificar donde esta la imagen (png)
+
+especificar carpeta maps
+---
+turtlebot.inc donde definimos el modelo del robot
+
+cuidado con las modificaciocnes, sensible a la sintaxis. Ej.: range [] meter un espacio entre range y corchete
+
+---
+
+catkin_create_package dependencies: stage_ros
+
+---
+Simular  un  comportamiento  en  el  que  el  robot  camine  lo  “más  centrado  posible”  hacia  un  objetivo “virtual” que su ubica a cierta distancia en la dirección de avance.  Cuando se detecta que hay obstáculos que cierran completamente el avance del robot (dead-end o cul-de-sac), se colocará el objetivo virtual en la parte trasera con el fin de que el robot invierta la dirección de movimiento.
+
+AL COPIAR EL ARCHIVO EN OTRA CARPETA:
+cambiar en el archivo maze.world esto   bitmap "../maps/maze.png" añadir maps ya que no estaba bien definido
+
+ir moviendo el punto fijo
+
+
