@@ -10,7 +10,7 @@
       <visual>
          <geometry>
             <!-- new mesh -->
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/main_body.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/main_body.dae"/>
          </geometry>
          <origin rpy="0 0 0" xyz="0.001 0 0.05199"/>
       </visual>
@@ -63,7 +63,7 @@
 <link name="wheel_left_link">
       <visual>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/wheel.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/wheel.dae"/>
          </geometry>
          <origin rpy="0 0 0" xyz="0 0 0"/>
       </visual>
@@ -105,7 +105,7 @@
 <link name="wheel_right_link">
       <visual>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/wheel.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/wheel.dae"/>
          </geometry>
          <origin rpy="0 0 0" xyz="0 0 0"/>
       </visual>
@@ -228,7 +228,7 @@
       <visual>
          <origin rpy="0 0 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -256,7 +256,7 @@
       <visual>
          <origin rpy="0 0 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -284,7 +284,7 @@
       <visual>
          <origin rpy="0 0 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -311,7 +311,7 @@
       <visual>
          <origin rpy="0 0 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -339,7 +339,7 @@
       <visual>
          <origin rpy="0 0 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -372,7 +372,7 @@
       <visual>
          <origin rpy="0 0 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_bottom.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -395,7 +395,7 @@
       <visual>
          <origin rpy="0 0 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/plate_bottom.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/plate_bottom.dae"/>
          </geometry>
       </visual>
        <collision>
@@ -425,7 +425,7 @@
       <visual>
          <origin rpy="0 3.14159265359 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_middle.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_middle.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -452,7 +452,7 @@
       <visual>
          <origin rpy="0 3.14159265359 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_middle.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_middle.dae"/>
          </geometry>
       </visual>
        <collision>
@@ -479,7 +479,7 @@
       <visual>
          <origin rpy="0 3.14159265359 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_middle.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_middle.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -506,7 +506,7 @@
       <visual>
          <origin rpy="0 3.14159265359 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_middle.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_middle.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -533,7 +533,7 @@
       <visual>
          <origin rpy="0 0 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/plate_middle.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/plate_middle.dae"/>
          </geometry>
       </visual>
        <collision>
@@ -564,7 +564,7 @@
             <!--
             <mesh filename="package://turtlebot_description/meshes/stacks/hexagons/pole_top.dae" />
             -->
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_top.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_top.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -594,7 +594,7 @@
             <!--
             <mesh filename="package://turtlebot_description/meshes/stacks/hexagons/pole_top.dae" />
             -->
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_top.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_top.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -623,7 +623,7 @@
             <!--
             <mesh filename="package://turtlebot_description/meshes/stacks/hexagons/pole_top.dae" />
             -->
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_top.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_top.dae"/>
          </geometry>
       </visual>
       <collision>
@@ -658,7 +658,7 @@
             <!--
             <mesh filename="package://turtlebot_description/meshes/stacks/hexagons/pole_top.dae" />
             -->
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/pole_top.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/pole_top.dae"/>
          </geometry>
       </visual>
     <collision>
@@ -678,7 +678,7 @@
       <visual>
          <origin rpy="0 0 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/stacks/hexagons/plate_top.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/stacks/hexagons/plate_top.dae"/>
          </geometry>
       </visual>
        <collision>
@@ -708,7 +708,7 @@
          <geometry>
             <!-- <cylinder radius="0.005" length="0.05" /> -->
             <cylinder length="0.0936" radius="0.006"/>
-            <!-- <mesh filename="package://my_mira_description/meshes/kobuki_meshes/sensors/sensor_pole.dae" /> -->
+            <!-- <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/sensors/sensor_pole.dae" /> -->
          </geometry>
       </visual>
        <collision>
@@ -741,7 +741,7 @@
       <visual>
          <origin rpy="0 0 0" xyz="0 0 -0.01"/>
          <geometry>
-            <!-- <mesh filename="package://my_mira_description/meshes/sensors/sensor_pole.dae" /> -->
+            <!-- <mesh filename="package://mis_modelos_robots/meshes/sensors/sensor_pole.dae" /> -->
             <cylinder length="0.0936" radius="0.006"/>
          </geometry>
       </visual>
@@ -770,7 +770,7 @@
          <!-- <origin rpy="-1.57079632679 0 0" xyz="0 0 0" /> -->
          <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
          <geometry>
-            <!--<mesh filename="package://my_mira_description/meshes/xtion_pro_stack.dae" /> -->
+            <!--<mesh filename="package://mis_modelos_robots/meshes/xtion_pro_stack.dae" /> -->
             <!-- <box size="0.0330 0.2760 0.0120" /> -->
              <box size="0.0330 0.2760 0.0120"/>
          </geometry>
@@ -820,7 +820,7 @@
         <!-- <origin rpy="0 0 1.57079632679" xyz="-0.015 0.0035 0.004" /> -->
         <origin rpy="0 0 1.57079632679" xyz="-0.015 0.0035 0.0272"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kinect.dae"/> 
+            <mesh filename="package://mis_modelos_robots/meshes/kinect.dae"/> 
             <!--<box size="0.0730 0.2760 0.0720" /> -->
          </geometry>
       </visual>
@@ -845,7 +845,7 @@
       <visual>
          <origin rpy="0 0 0" xyz="0 0 0"/>
          <geometry>
-            <mesh filename="package://my_mira_description/meshes/kobuki_meshes/sensors/hokuyo.dae"/>
+            <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/sensors/hokuyo.dae"/>
          </geometry>
       </visual>
 </link>

@@ -9,7 +9,6 @@ Panels:
         - /RobotModel1
         - /RobotModel1/Links1
         - /RobotModel1/Links1/base_link1
-        - /RobotModel1/Links1/camera_link1
       Splitter Ratio: 0.5
     Tree Height: 565
   - Class: rviz/Selection
@@ -69,22 +68,12 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        camera_link:
+        wheel_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        head_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        left_eye_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_eye_link:
+        wheel_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -135,10 +124,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.625397742
+      Pitch: 0.110398054
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.25539875
+      Yaw: 6.1536088
     Saved: ~
 Window Geometry:
   Displays:
