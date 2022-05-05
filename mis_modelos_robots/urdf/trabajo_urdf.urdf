@@ -1,77 +1,152 @@
 <?xml version="1.0"?>
-<robot name="mi_primer_robot">
+<robot name="trabajo_urdf">
 
-    <material name="green">
-        <color rgba=" 0 0.8 0 1"/>
-    </material>
+	<!-- Base Link -->
+	<link name="base_link">
+		<visual>
+			<origin xyz="0 0 0.075" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.5 0.5 0.25"/>
+			</geometry>
+            <material name="green"/>
+		</visual>
 
-    <material name="grey">
-        <color rgba="0.75 0.75 0.75 1"/>
-    </material>
-
-    <material name="red">
-        <color rgba="0.0 0 0 1"/>
-    </material>
-
-    <material name="blue">
-        <color rgba="0 0 0.8 1"/>
-    </material>
-
-    <material name="white">
-        <color rgba="1.0 1.0 1.0 1"/>
-    </material>
-
-    <material name="black">
-        <color rgba="0.0 0.0 0.0 1"/>    
-    </material>
-
-    <link name="base_link">
-        <visual>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-            <cylinder radius="0.1" length="0.07"/>
-        </geometry>
-        <material name="green"/>
-        </visual>    
-    </link>
-
-
-    <link name="wheel_left_link">
-        <visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/wheel.dae"/>
+                <box size="0.5 0.5 0.25"/>             <!-- Una figura basica para saber cuando se choca-->
             </geometry>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+        </collision>
+
+        <inertial>
+            <mass value="5"/>
+            <inertia ixx="0.13" ixy="0.0" ixz="0.0" iyy="0.21" iyz="0.0" izz="0.13"/>
+        </inertial>
+
+	</link>
+
+    <gazebo reference="base_link">
+        <mu1>0.3</mu1>
+        <mu2>0.3</mu2>
+        <material>Gazebo/Orange</material>
+        <kp>1000000.0</kp>
+        <kd>100.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>1.0</maxVel>
+
+    </gazebo>
+
+        <!-- Right Wheel -->
+    <link name="right_wheel">
+        <visual>
+            <origin xyz="0 0 0.075" rpy="1.570795 0 0"/>
+            <geometry>
+                <cylinder length="0.1" radius="0.2"/>
+            </geometry>
+            <material name="black"/>
         </visual>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.5 0.5 0.25"/>
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="5"/>
+            <inertia ixx="0.13" ixy="0.0" ixz="0.0" iyy="0.21" iyz="0.0" izz="0.13"/>
+        </inertial>
+
     </link>
 
 
-    <joint name="wheel_left_joint" type="continuous">
+
+    <joint name="joint_right_wheel" type="continuous">
         <parent link="base_link"/>
-        <child link="wheel_left_link"/>
-        <origin rpy="-1.57079632679 0 0" xyz="0.00 0.0615 -0.045"/>
-        <axis xyz="0 0 1"/>
+        <child link="right_wheel"/>
+        <origin xyz="0 -0.30 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
     </joint>
 
 
-    <link name="wheel_right_link">
+    <gazebo reference="right_wheel">
+        <mu1>1.0</mu1>
+        <mu2>1.0</mu2>
+        <material>Gazebo/Black</material>
+        <kp>1000000.0</kp>
+        <kd>100.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>1.0</maxVel>
+    </gazebo>
+
+    <!-- Left Wheel -->
+    <link name="left_wheel">
         <visual>
+            <origin xyz="0 0 0.075" rpy="1.570795 0 0"/>
             <geometry>
-                <mesh filename="package://mis_modelos_robots/meshes/kobuki_meshes/wheel.dae"/>
+                <cylinder length="0.1" radius="0.2"/>
             </geometry>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="black"/>
         </visual>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.5 0.5 0.25"/>
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="5"/>
+            <inertia ixx="0.13" ixy="0.0" ixz="0.0" iyy="0.21" iyz="0.0" izz="0.13"/>
+        </inertial>
+
     </link>
 
-
-    <joint name="wheel_right_joint" type="continuous">
+    <joint name="joint_left_wheel" type="continuous">
         <parent link="base_link"/>
-        <child link="wheel_right_link"/>
-        <origin rpy="-1.57079632679 0 0" xyz="0.00 -0.0615 -0.045"/>
-        <axis xyz="0 0 1"/>
+        <child link="left_wheel"/>
+        <origin xyz="0 0.30 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
     </joint>
 
+    <gazebo reference="left_wheel">
+        <mu1>1.0</mu1>
+        <mu2>1.0</mu2>
+        <kp>1000000.0</kp>
+        <kd>100.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>1.0</maxVel>
+        <material>Gazebo/Black</material>
+    </gazebo>
 
+
+    <gazebo>
+      <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
+         <alwaysOn>true</alwaysOn>
+         <updateRate>20</updateRate>
+         <publishTf> true </publishTf>
+         <leftJoint>wheel_right_joint</leftJoint>
+         <rightJoint>wheel_left_joint</rightJoint>
+         <wheelSeparation>.230</wheelSeparation>
+         <wheelDiameter>0.070</wheelDiameter>
+         <torque>5.0</torque>
+         <commandTopic>/cmd_vel</commandTopic>
+         <odometrySource>world</odometrySource> <!-- 'encoder' instead of 'world' is also possible -->
+         <odometryTopic>/odom</odometryTopic> <!-- relative/name ,  /global/name  -->
+         <odometryFrame>/odom</odometryFrame>
+         <robotBaseFrame>/base_footprint</robotBaseFrame>
+         <publishOdomTF> true </publishOdomTF>
+         <publishWheelJointState>true</publishWheelJointState>
+        <!-- Set to true to publish transforms for the wheel links, defaults to false -->
+         <publishWheelTF>true</publishWheelTF>
+         <wheelAcceleration> 0 </wheelAcceleration>
+         <wheelTorque> 5.0 </wheelTorque>
+         <legacyMode>true</legacyMode>
+         <rosDebugLevel> na </rosDebugLevel> <!-- <rosDebugLevel>Debug</rosDebugLevel> -->
+      </plugin>
+   </gazebo>
 
 
 </robot>
